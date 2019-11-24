@@ -34,8 +34,7 @@ def new_task(task_list):
         print("Name conflicts found. Suffi(ces) '_2' added to the task name.")
 
     task_new = task.Task(name=name)
-    print(task_new.__dict__)
-    
+
     start_date = input("Please input the start date of the task (default=today): ")
     task_new.start_date = start_date
     end_date = input("Please input the deadline (default=NaT): ")

@@ -10,7 +10,7 @@ com_default = False
 class Task:
 
     # Initialiser
-    def __init__(self, name, start_date=today, deadline=nat):#, completed=com_default):
+    def __init__(self, name, start_date=today, deadline=nat):
         # Assign the task's main non-boolean attributes
         # Default: start_date=today, deadline=NaT
         self.name = name
