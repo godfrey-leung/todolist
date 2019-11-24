@@ -23,9 +23,9 @@ start_date = today
 deadline = NaT
 completed = False
 ```
-For simplicity, start_date and deadline must be inputted in YYYY-MM-DD format,
-and completed in [Yes/No, True/False, 0/1]. Attributes are resetted to default
-if not in valid format. 
+For simplicity, start_date and deadline must be inputted in `YYYY-MM-DD` format,
+and completed in `[Yes/No, True/False, 0/1]`. Attributes are resetted to default
+if not in valid format.
 
 ## Version
 
