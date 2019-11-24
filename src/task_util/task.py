@@ -4,12 +4,13 @@ import numpy as np
 # Default variables for initialiser
 today = np.datetime64(date.today())
 nat = np.datetime64("NaT")
+com_default = False
 
 # Define the task class object which store info about a specific task
 class Task:
 
     # Initialiser
-    def __init__(self, name, start_date=today, deadline=nat, com=False):
+    def __init__(self, name, start_date=today, deadline=nat):#, completed=com_default):
         # Assign the task's main non-boolean attributes
         # Default: start_date=today, deadline=NaT
         self.name = name
@@ -18,7 +19,7 @@ class Task:
 
         # boolean attributes
         # Default: completed = False
-        self.completed = com
+        self._completed = False
 
     # Define the remaining days to finish property, i.e. from today to deadline
     # (if not yet started)
@@ -36,7 +37,7 @@ class Task:
         """
         # Only calculate and return the day left if task is not completed yet
         # and start_date already passed
-        if not(self.__completed) and self.__start_date < today:
+        if not(self._completed) and self.__start_date < today:
             days_remain = self.__deadline - today
         else:
             days_remain = nat
@@ -56,7 +57,7 @@ class Task:
             set it to False.
 
         """
-        is_overdue = self.__deadline < today and not(self.__completed)
+        is_overdue = self.__deadline < today and not(self._completed)
         return is_overdue
 
     # start_date property, allowing user to set the start_date attribute
@@ -125,7 +126,7 @@ class Task:
     # completed property, allowing user to set the completed attribute
     @property
     def completed(self):
-        return self.__completed
+        return self._completed
 
     @completed.setter
     def completed(self, completed):
@@ -138,11 +139,11 @@ class Task:
             # Check whether the user input is valid or not, i.e. Yes/No,
             # True/False or 0/1
             if completed.upper() in ["YES", "TRUE", "1"]:
-                self.__completed = True
+                self._completed = True
             elif completed.upper() in ["NO", "FALSE", "0"]:
-                self.__completed = False
+                self._completed = False
             else:
-                self.__completed = False
+                self._completed = False
                 print("Wrong format! Please enter only Yes/No, True/False",
                       " or 0/1.")
                 print("Resetted to default value, i.e. False")
