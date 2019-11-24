@@ -35,7 +35,8 @@ class Task:
 
         """
         # Only calculate and return the day left if task is not completed yet
-        if not(self.__completed):
+        # and start_date already passed
+        if not(self.__completed) and self.__start_date < today:
             days_remain = self.__deadline - today
         else:
             days_remain = nat
