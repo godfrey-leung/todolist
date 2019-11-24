@@ -62,8 +62,3 @@ def add_new(task_list):
     # create a new task
     task = new_task(task_list)
     return task_list.append(task)
-
-
-#if __name__ == '__main__':
-#    to_do_list = []
-#    add_task(to_do_list)
