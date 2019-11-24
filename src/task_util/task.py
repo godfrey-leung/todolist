@@ -9,7 +9,7 @@ nat = np.datetime64("NaT")
 class Task:
 
     # Initialiser
-    def __init__(self, name, start_date=today, deadline=nat, completed=False):
+    def __init__(self, name, start_date=today, deadline=nat, com=False):
         # Assign the task's main non-boolean attributes
         # Default: start_date=today, deadline=NaT
         self.name = name
@@ -18,7 +18,7 @@ class Task:
 
         # boolean attributes
         # Default: completed = False
-        self.completed = completed
+        self.completed = com
 
     # Define the remaining days to finish property, i.e. from today to deadline
     # (if not yet started)
@@ -81,8 +81,8 @@ class Task:
                                                             '%Y-%m-%d').date())
             except:
                 self.__start_date = today
-                print("Wrong date format! Please enter date in the following \
-                      format: YYYY-MM-DD")
+                print("Wrong date format! Please enter date in the following", \
+                      " format: YYYY-MM-DD")
                 print("Resetted to default value, i.e. today")
 
     # deadline property, allowing user to set the deadline attribute
@@ -110,8 +110,8 @@ class Task:
                                                         '%Y-%m-%d').date())
             except:
                 self.__deadline = nat
-                print("Wrong date format! Please enter date in the following \
-                      format: YYYY-MM-DD")
+                print("Wrong date format! Please enter date in the following", \
+                      " format: YYYY-MM-DD")
                 print("Resetted to default value, i.e. NaT")
 
         # Check if end_date is after the start_date. If not, reset it to NaT
@@ -134,13 +134,14 @@ class Task:
 
         """
         if not isinstance(completed, bool):
-            # Check whether the user input is valid or not, i.e. Yes/No, True/False
-            # or 0/1
+            # Check whether the user input is valid or not, i.e. Yes/No,
+            # True/False or 0/1
             if completed.upper() in ["YES", "TRUE", "1"]:
                 self.__completed = True
             elif completed.upper() in ["NO", "FALSE", "0"]:
                 self.__completed = False
             else:
                 self.__completed = False
-                print("Wrong format! Please enter only Yes/No, True/False or 0/1.")
+                print("Wrong format! Please enter only Yes/No, True/False",
+                      " or 0/1.")
                 print("Resetted to default value, i.e. False")

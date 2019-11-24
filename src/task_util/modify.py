@@ -27,8 +27,9 @@ def modify(task_list):
         task_index_to_modify = name_check.index(True)
 
         # Ask user the attribute to be modified
-        attr = input("""Please choose the attribute to be modified: (1: start_date; 2: deadline;
-                     3: completed; anything else: quit) """)
+        attr = input("Please choose the attribute to be modified: ", \
+                     "(1: start_date; 2: deadline; 3: completed; ", \
+                     "anything else: quit)")
 
         if attr == "1":
             new_value = input("Please enter the new start_date: ")
@@ -37,8 +38,8 @@ def modify(task_list):
             new_value = input("Please enter the new deadline: ")
             task_list[task_index_to_modify].deadline = new_value
         elif attr == "3":
-            new_value = input("Please enter the whether the task is completed \
-                              or not: ")
+            new_value = input("Please enter the whether the task is completed",
+                             " or not: ")
             task_list[task_index_to_modify].completed = new_value
         else:
             pass
