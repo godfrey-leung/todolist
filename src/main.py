@@ -1,3 +1,4 @@
+import os
 from datetime import date
 from task_util import add, delete, modify
 from output import print_task
@@ -6,6 +7,10 @@ if __name__ == '__main__':
     # initialiser
     to_do_list = []
     action = True
+
+    # Path for output files
+    current_path = os.getcwd()
+    output_path = os.path.join(current_path,r'outputfiles')
 
     # ask user for actions
     while action:
@@ -29,4 +34,4 @@ if __name__ == '__main__':
             action = False
 
     # output the to-do list dataframe to a csv file
-    df_task.to_csv('\outputfiles\ to_do_list.csv', index=False)
+    df_task.to_csv(os.path.join(output_path,r'to_do_list.csv'), index=False)
