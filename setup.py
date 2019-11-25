@@ -8,7 +8,7 @@ with open('README.md', 'r') as fh:
 
 setuptools.setup(
     name="simple_todolist",
-    version="1.0.0"
+    version="1.0.0",
     author="Godfrey Leung",
     author_email="godfrey.leung.cosmo@gmail.com",
     description="Creating a simple to do list",
