@@ -1,9 +1,12 @@
 import setuptools
+from os import path
 
-with open('requirements.txt', 'r') as fh:
+here = path.abspath(path.dirname(__file__))
+
+with open(path.join(here, 'requirements.txt'), 'r') as fh:
     install_requirements = fh.readlines()
 
-with open('README.md', 'r') as fh:
+with open(path.join(here, 'README.md'), 'r') as fh:
     long_description = fh.read()
 
 setuptools.setup(
