@@ -31,6 +31,13 @@ if not in valid format.
 
 1.0.0
 
+## Future work for improvements
+1) Add more unit tests
+2) Add more task attributes, e.g. priority, person responsible, etc
+3) Allow more datetime input formats by using regex and/or dateutil.parser
+4) Allow users to input relations between different tasks
+
+
 ## Author
 
 Godfrey Leung, godfrey.leung.cosmo@gmail.com

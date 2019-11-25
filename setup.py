@@ -14,7 +14,7 @@ setuptools.setup(
     description="Creating a simple to do list",
     long_description=long_description,
     long_description_content_type='text/markdown',
-#    url='https://github.com/Team-Cloudbusters/cloudbusting',
+    url='https://github.com/godfrey-leung/todolist',
     package_dir={'': 'src'},
     packages=setuptools.find_packages('src'),
     install_requires=install_requirements,
