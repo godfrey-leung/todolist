@@ -35,11 +35,13 @@ def new_task(task_list):
 
     task_new = task.Task(name=name)
 
-    start_date = input("Please input the start date of the task (default=today): ")
+    start_date = input("Please input the start date of the task " +
+                       "(default=today): ")
     task_new.start_date = start_date
     end_date = input("Please input the deadline (default=NaT): ")
     task_new.deadline = end_date
-    completed = input("Please input if the task is completed or not (default=False): ")
+    completed = input("Please input if the task is completed or not " +
+                      "(default=False): ")
     task_new.completed = completed
 
     return task_new

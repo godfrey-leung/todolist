@@ -29,7 +29,7 @@ def modify(task_list):
         # Ask user the attribute to be modified
         ask_attr_str = "Please choose the attribute to be modified " + \
                      "(1: start_date; 2: deadline; 3: completed; " + \
-                     "anything else: quit) :"
+                     "anything else: quit): "
         attr = input(ask_attr_str)
 
         if attr == "1":
