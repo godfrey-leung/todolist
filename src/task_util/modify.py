@@ -39,8 +39,8 @@ def modify(task_list):
             new_value = input("Please enter the new deadline: ")
             task_list[task_index_to_modify].deadline = new_value
         elif attr == "3":
-            new_value = input("Please enter the whether the task is completed",
-                             " or not: ")
+            new_value = input("Please enter the whether the task is" + \
+                             " completed or not: ")
             task_list[task_index_to_modify].completed = new_value
         else:
             pass
