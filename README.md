@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/godfrey-leung/todolist.svg?branch=master)](https://travis-ci.com/godfrey-leung/todolist)
+
 # todolist
 
 Todolist is a simple Python library for creating a to-do list by asking user
